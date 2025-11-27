@@ -1,0 +1,77 @@
+/* Floating Hearts */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Page Fade */
+.fade-page {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Popup Animations */
+.fade-in {
+    animation: popupFadeIn 0.35s ease-out forwards;
+}
+
+.fade-out {
+    animation: popupFadeOut 0.3s ease-out forwards;
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popupFadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.8); }
+}
+
+/* MOBILE RESPONSIVE FIXES */
+#galleryCard img,
+#qrCard img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 380px) {
+    #galleryCard .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+#galleryCard,
+#videoCard,
+#qrCard {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.main-photo {
+    height: auto !important;
+    max-height: 260px;
+}
+
+@media (max-width: 480px) {
+    #galleryCard,
+    #videoCard,
+    #qrCard {
+        width: 100% !important;
+        padding: 1.3rem;
+    }
+
+    #videoPlayer {
+        max-height: 40vh;
+    }
+}

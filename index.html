@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Monthsary My Love ❤️</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-pink-100 overflow-hidden">
+
+    <!-- Floating Hearts -->
+    <div id="hearts-container"></div>
+
+    <div class="flex items-center justify-center min-h-screen fade-page px-3">
+        <div class="text-center bg-white p-8 rounded-3xl shadow-xl w-full max-w-md">
+
+            <!-- Typewriter -->
+            <h1 id="typewriter" class="text-3xl font-bold text-pink-500 mb-6 mt-6 text-center"></h1>
+
+            <!-- Main Image -->
+            <img 
+                class="main-photo rounded-2xl shadow-md w-full h-auto max-h-64 object-cover mt-8"
+                src="Assets/1.jpg"
+                alt="Love Photo"
+            />
+
+            <p class="text-gray-600 mt-4 mb-6">
+                💖 Every moment with you is special. Thank you for making my life brighter. ❤️
+            </p>
+
+            <!-- OPEN GALLERY BUTTON -->
+            <button id="openGalleryBtn"
+                class="mt-4 bg-purple-500 hover:bg-purple-600 text-white py-2 px-6 rounded-xl transition">
+                Click Me 💓
+            </button>
+
+        </div>
+    </div>
+
+    <!-- GALLERY POPUP -->
+    <div id="galleryModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+        <div id="galleryCard" class="bg-white p-6 rounded-2xl shadow-xl w-full max-w-lg relative max-h-[90vh] overflow-y-auto">
+
+            <button id="closeGallery" class="absolute top-3 right-3 text-xl font-bold">✖</button>
+
+            <h2 class="text-3xl font-bold text-pink-600 mb-4 text-center">I Love You Echiii 💗</h2>
+
+            <!-- IMAGE GALLERY -->
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-2 xs:grid-cols-1">
+                <img src="Assets/1.jpg" class="rounded-lg shadow w-full object-cover h-32">
+                <img src="Assets/2.jpg" class="rounded-lg shadow w-full object-cover h-32">
+                <img src="Assets/3.jpg" class="rounded-lg shadow w-full object-cover h-32">
+                <img src="Assets/4.jpg" class="rounded-lg shadow w-full object-cover h-32">
+            </div>
+
+            <!-- VIDEO BUTTON -->
+            <button id="playVideoBtn"
+                class="mt-5 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-xl">
+                Play Video 🎬
+            </button>
+
+            <!-- QR BUTTON -->
+            <button id="openQRBtn"
+                class="mt-3 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-xl">
+                Scan Me 📸
+            </button>
+
+        </div>
+    </div>
+
+    <!-- IMAGE ZOOM POPUP -->
+    <div id="imageZoomModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+        <img id="zoomedImage" class="max-w-full max-h-full rounded-2xl shadow-2xl fade-in">
+    </div>
+
+    <!-- VIDEO POPUP -->
+    <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+        <div id="videoCard" class="bg-white p-4 rounded-2xl shadow-xl w-full max-w-lg relative max-h-[90vh] overflow-y-auto">
+            <button id="closeVideo" class="absolute top-3 right-3 text-xl font-bold">✖</button>
+
+            <video id="videoPlayer" class="w-full rounded-xl mt-2 max-h-[45vh]" controls>
+                <source src="Assets/vid1.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+
+    <!-- QR POPUP -->
+    <div id="qrModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+        <div id="qrCard" class="bg-white p-6 rounded-2xl shadow-xl w-full max-w-sm relative fade-in max-h-[90vh] overflow-y-auto">
+            <button id="closeQR" class="absolute top-3 right-3 text-xl font-bold">✖</button>
+
+            <h2 class="text-2xl font-bold text-green-600 mb-4 text-center">Scan Me</h2>
+
+            <img src="Assets/Letter.png"
+                class="w-full rounded-xl shadow-lg mb-4 object-contain max-h-72">
+
+            <!-- NEW LINK BUTTON -->
+            <a href="https://jdoos4rwvg2-live.yw.app" target="_blank"
+                class="block w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-xl text-center">
+                If QR is not working, click here 🔗
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
